@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Gridy</title>
+  </head>
+  <style>
+  body{
+    margin: 0;
+    font-family: sans-serif;
+    min-height: 800px;
+    padding-bottom: 50px;
+    /* background-color: #FEDFE6; */
+    background-image: url(img/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+  }
+  h1{
+    color: #ffffff;
+  }
+  p{
+    color: #ffffff;
+  }
+  .desc{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .grid-wrap{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 0 0 30px 0;
+    position: relative;
+    list-style: none;
+  }
+  .grid-wrap li{
+    float: left;
+    cursor: pointer;
+  }
+  .grid-wrap li p{
+    margin: 0;
+    color: #392C5A;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .grid-wrap .grid-sizer{
+    width: 100%;
+  }
+  .grid-wrap figure{
+    margin: 0 5px 5px 0;
+    background: #D6A7CF;
+  }
+  .grid-wrap figure div{
+    width: 100%;
+  }
+  </style>
+  <body>
+  <div class="content">
+    <div class="desc">
+      <div>
+        <h1>
+          Hello this is Gridy
+        </h1>
+        <p>
+          Load new components when you scroll down to bottom
+        </p>
+      </div>
+    </div>
+    <div id="gridy">
+      <ul class="grid-wrap">
+        <li class="grid-sizer"></li>
+      </ul>
+    </div>
+  </div>
+  <script src="js/gridy.js"></script>
+  <script src="js/gridy-scroll-load.js"></script>
+	<script>
+    window.onload = function(e){ new Gridy(document.getElementById('gridy')); }
+	</script>
+  </body>
+</html>
